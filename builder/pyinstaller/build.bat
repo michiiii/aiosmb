@@ -19,6 +19,7 @@ pip install msldap
 cd %repo%\examples\
 pyinstaller -F smbclient.py %hiddenimports%
 pyinstaller -F smbcertreq.py %hiddenimports%
+pyinstaller -F smbshareenum.py %hiddenimports%
 cd %repo%\examples\dist & copy *.exe %root%
 cd %repo%\examples\scanners
 pyinstaller -F __main__.py %hiddenimports%
@@ -29,4 +30,3 @@ GOTO :CLEANUP
 IF NOT DEFINED __BUILDALL_VENV__ (deactivate)
 cd %root%
 EXIT /B
-
